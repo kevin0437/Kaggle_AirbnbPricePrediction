@@ -2,20 +2,6 @@
 
 This repository contains the code and analysis for the Duke University CS671 Fall 2023 in-class Kaggle competition: Airbnb Price Prediction. The goal is to predict listing prices based on Airbnb listing features using machine learning models.
 
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Data](#data)
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-- [Data Preprocessing](#data-preprocessing)
-- [Modeling](#modeling)
-  - [Random Forest](#random-forest)
-  - [XGBoost](#xgboost)
-- [Hyperparameter Tuning](#hyperparameter-tuning)
-- [Results](#results)
-- [Usage](#usage)
-- [Requirements](#requirements)
-- [Repository Structure](#repository-structure)
-- [License](#license)
 
 ## Project Overview
 The task is part of a Duke CS671 assignment to compete on Kaggle and build predictive models for Airbnb listing prices. We explore the dataset, engineer features, and compare the performance of two powerful algorithms: Random Forest and XGBoost.
@@ -66,31 +52,6 @@ We used Bayesian optimization (`BayesSearchCV`) with k-fold cross-validation to 
   - XGBoost: *0.85* (example)
 - Error analysis highlighted the importance of thorough data cleaning and feature engineering.
 
-## Usage
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/kevin0437/Kaggle_AirbnbPricePrediction.git
-   cd Kaggle_AirbnbPricePrediction
-   ```
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run EDA notebook**:
-   ```bash
-   jupyter notebook notebooks/EDA.ipynb
-   ```
-4. **Preprocess & train models**:
-   ```bash
-   python src/preprocess.py
-   python src/train.py --model random_forest
-   python src/train.py --model xgboost
-   ```
-5. **Evaluate & submit**:
-   ```bash
-   python src/evaluate.py --model xgboost
-   ```
-
 ## Requirements
 - Python 3.8+
 - pandas
@@ -102,25 +63,7 @@ We used Bayesian optimization (`BayesSearchCV`) with k-fold cross-validation to 
 - scipy
 - scikit-optimize
 
-*(Install via `pip install -r requirements.txt`)*
 
-## Repository Structure
-```
-Kaggle_AirbnbPricePrediction/
-├── data/                   # Raw and processed data files
-├── notebooks/              # Jupyter notebooks for EDA and analysis
-│   └── EDA.ipynb
-├── src/                    # Source code for preprocessing, training, evaluation
-│   ├── preprocess.py
-│   ├── train.py
-│   └── evaluate.py
-├── results/                # Model outputs, plots, and logs
-├── requirements.txt        # Python dependencies
-└── README.md               # Project overview and instructions
-```
-
-## License
-This project is provided under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
